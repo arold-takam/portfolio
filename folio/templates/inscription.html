@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Takus Dev & Services/INSCRIPTION</title>
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'css/inscription.css' %}">
+</head>
+<body>  
+   <header>
+       <a href="/"><img src="{% static 'images/logo.png' %}" alt=""></a>
+       <nav>
+           <ul>
+               <li><a href="/">HOME</a></li>
+               <li><a href="#services">SERVICES</a></li>
+               <li><a href="#achieve">ACHIEVEMENTS</a></li>
+           </ul>
+           <div id="log">
+               <a href="/inscription/">INSCRIPTION</a>
+               <a href="/connexion/">CONNEXION</a>
+           </div>
+       </nav>
+   </header>
+    <main>
+        <h1>Inscrivez vous ici</h1>
+        <fieldset>
+            <form method="POST">
+                {% csrf_token %}
+                {{ user_form.as_p }}
+                <button type="submit">S'inscrire</button>
+            </form>
+        </fieldset>
+    </main>
+    <footer>
+        <h4>YOu Can Join Me On</h4>
+        <div id="social">
+            <img src="{% static 'images/insta.png' %}" alt="">
+            <img src="{% static 'images/facebook_5968764.png' %}" alt="">
+            <img src="{% static 'images/linkedin_3536505.png' %}" alt="">
+            <img src="{% static 'images/location_90567.png' %}" alt="">
+            <img src="{% static 'images/logo-twitter-blanc.png' %}" alt="">
+            <img src="{% static 'images/telegram_3536661.png' %}" alt="">
+            <img src="{% static 'images/whatsapp_3536445.png' %}" alt="">
+            <img src="{% static 'images/youtube_4494485.png' %}" alt="">
+        </div>
+        <div id="legal">
+ <!--             <h4>Build by TAKAM STEVE AROLD</h4> -->
+            <span id="cop">
+                <img src="{% static 'images/copyright_24dp_000000_FILL0_wght400_GRAD0_opsz24.png' %}" alt="">
+                <p>Copyright 2018./ <i>Takam Steve Arold</i></p>
+            </span>
+        </div>
+    </footer>
+ </body>
+ </html>

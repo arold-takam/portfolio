@@ -1,0 +1,513 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15vh;
+}
+
+header>a>img{
+    position: relative;
+    left: 40vw;
+    width: 20rem;
+    height: 10rem;
+    margin: 1rem 0rem;
+}
+
+header>nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(160, 160, 160);
+    padding: 0.7rem 2rem;
+}
+
+header>nav>ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 40vw;
+}
+
+header>nav>ul>li>a{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    background-color: white;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.7rem;
+    transition: 1s;
+}
+
+header>nav>ul>li>a:hover{
+    color: white;
+    font-size: xx-large;
+    font-weight: bolder;
+    background-color: black;
+}
+
+header>nav>#log{
+    display: flex;
+    justify-content: space-between;
+    width: 23vw;
+}
+
+header>nav>#log>a{
+    text-decoration: none;
+    color: black;
+    font-weight: light;
+    transition: 1s;
+}
+
+header>nav>#log>a:hover{
+    font-size: 120%;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+main>h1{
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+    animation-name: well;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    transition: 5s;
+
+    margin-bottom: 15vh;
+}
+
+@keyframes well{
+    1%{
+        opacity: 0;
+        scale: 0.5;
+    }
+    50%{
+        opacity: 0.5;
+        scale: 1;
+    }
+    100%{
+        opacity: 1;
+        scale: 3;
+    }
+}
+
+main>#sep{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 1.5rem;
+    background-color: rgba(206, 206, 206, 0.664);
+    padding: 0rem 0.7rem;
+    margin-bottom: 15vh;
+    margin-top: 8vh;
+}
+
+main>#sep:hover img{
+    background-color: rgba(255, 255, 255, 0.247);
+    scale: 1;
+}
+
+main>#sep:hover #imf{
+    background-color: rgba(8, 8, 8, 0.247);
+    scale: 1.1;
+}
+
+main>#sep>img{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+main>#sep>#imf{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    rotate: 180deg;
+    transition: 1s;
+}
+
+main>#home{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0rem 2rem;
+    transition: 1s;
+}
+
+main>#home>#bio1{
+    width: 35vw;
+    height: 25rem;
+    color: rgba(255, 255, 255, 0.514);
+    text-align: justify;
+    text-indent: 5rem;
+    background: linear-gradient(blue, rgb(124, 124, 245));
+    background-position: left;
+    background-size: cover;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    transition: 1s;
+}
+
+main>#home>#bio1:hover{
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+}
+
+#bio1>h3{
+    position: relative;
+    left: 25%;
+    margin-bottom: 1rem;
+}
+
+#bio1 p{
+    margin-bottom: 2rem;
+}
+
+#bio1>a{
+    position: relative;
+    left: 25%;
+    background-color: rgba(255, 255, 255, 0.616);
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    margin-top: 1.5rem;
+    border-radius: 0.7rem;
+    cursor: pointer;
+}
+
+main>#home>img{
+    position: relative;
+    top: 40vh;
+    width: 33rem;
+    height: 25rem;
+    border-radius: 2rem;
+    border-top-left-radius: 0rem;
+    transition: 1s;
+}
+
+#services{
+    height: 100vh;
+    padding: 0rem 2rem;
+    transition: 1s;
+}
+
+#services>#stete{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 5rem;
+    margin-bottom: 5vh;
+}
+
+#services>#stete>h3{
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+#services>#stete>form>label{
+    color: white;
+    font-size: x-large;
+}
+
+
+#services>#stete>form>select{
+    width: 7rem;
+    height: 2rem;
+    font-size: large;
+}
+
+#services #sitems {
+    padding: 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.356);
+    width: auto;
+    height: 90vh;
+    overflow: auto scroll ;
+}
+
+#services #sitems table{
+    display: flex;
+    flex-direction: column;
+}
+
+#services #sitems table tr{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#services #sitems table tr td{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    height: auto;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    transition: 0.3s;
+}
+
+#services #sitems table tr td #col img{
+    position: relative;
+    left: 5%;
+    width: 90%;
+    height: 15rem;
+    box-shadow: 0.1rem 0.2rem 0.5rem rgb(138, 138, 255);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#services #sitems table tr td h4{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+#services #sitems table tr td p{
+    text-align: justify;
+    margin: 0rem 1rem;
+    margin-bottom: 1rem;
+}
+
+#services #sitems table tr td a{
+    position: relative;
+    left: 30%;
+    width: 8rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: lighter;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.7rem;
+    background-color: black;
+    padding: 0.3rem 0.3rem;
+}
+
+#services #sitems table tr td:hover{
+    font-size: larger;
+}
+
+#services #sitems table tr td:hover{
+    font-size: larger;
+}
+
+#services #sitems table tr td:hover a{
+    font-size: large;
+    font-weight: bolder;
+}
+
+#achieve{
+    height: 100vh;
+    padding: 0rem 2rem;
+    margin-bottom: 10rem;
+    transition: 1s;
+}
+
+#achieve>h3{
+    color: white;
+    font-size: xx-large;
+    margin-bottom: 2rem;
+}
+
+#achieve #aitems{
+    height: 60rem;
+    margin: 0rem 2rem;
+    padding: 2rem 2rem;
+    background-color: rgba(255, 255, 255, 0.466);
+    overflow: hidden scroll;
+}
+
+#achieve #aitems #real1{
+    display: flex;
+    height: 40%;
+    background-color: white;
+    margin-bottom: 2rem;
+}
+
+#achieve #aitems #real1 video{
+    width: 40%;
+    height: auto;
+}
+
+#achieve #aitems #real1  #deta{
+    width: 60%;
+    height: auto;
+    padding: 0.5rem 0.7rem;
+}
+
+#achieve #aitems #real1  #deta h4{
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 1rem;
+}
+
+#achieve #aitems #real1  #deta p{
+    text-align: justify;
+    text-indent: 3rem;
+    font-size: large;
+    margin-bottom: 1rem;
+}
+
+#achieve #aitems #real1  #deta ul{
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+#achieve #aitems #real1  #deta ul li{
+    margin-bottom: 1rem;
+}
+
+#achieve #aitems #real1  #deta ul #star{
+    display: flex;
+    align-items: center;
+    height: 1.5rem;
+}
+
+#achieve #aitems #real1  #deta ul #star h6{
+    font-size: large;
+    margin-right: 1rem;
+}
+
+#achieve #aitems #real1  #deta ul #star img{
+    height: 100%;
+}
+
+#achieve #aitems #real1  #deta #comd{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+
+#achieve #aitems #real1  #deta #comd button{
+    height: 3rem;
+    width: 7rem;
+    font-weight: lighter;
+    font-size: 0.9rem;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.658);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#achieve #aitems #real1  #deta #comd button:hover{
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    scale: 1.1;
+}
+
+#achieve #aitems #real1  #deta #comd #btb{
+    height: 3rem;
+    padding: 0rem 0.4rem;
+    font-weight: lighter;
+    font-size: large;
+    color: white;
+    background-color: rgba(0, 0, 255, 0.678);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#achieve #aitems #real1  #deta #comd #btb:hover{
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    scale: 1.1;
+}
+
+#top{
+    position: relative;
+    left: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50rem;
+    background-color: rgba(0, 132, 255, 0.89);
+    box-shadow: 0.1rem 0.1rem 1rem rgba(255, 255, 255, 0.596);
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+footer h4{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+footer #social{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer #social img{
+    width: 3rem;
+    height: 3rem;
+}
+
+footer #legal{
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer #legal h4{
+    position: relative;
+    left: 75vw;
+    margin-right: 1rem;
+    background-color: white;
+    border-radius: 3rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    width: 25rem;
+    padding: 0.5rem 0.5rem;
+} */
+
+footer #legal #cop{
+    position: relative;
+    left: 40vw;
+    display: flex;
+    align-items: center;
+    width: 35vw;
+    margin-bottom: 1.5rem;
+}
+
+footer #legal #cop img{
+    width: 2rem;
+    height: 2rem;
+}
+

@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15vh;
+}
+
+header>a>img{
+    position: relative;
+    left: 40vw;
+    width: 20rem;
+    height: 10rem;
+    margin: 1rem 0rem;
+}
+
+header>nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(160, 160, 160);
+    padding: 0.7rem 2rem;
+}
+
+header>nav>ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 40vw;
+}
+
+header>nav>ul>li>a{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    background-color: white;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.7rem;
+    transition: 1s;
+}
+
+header>nav>ul>li>a:hover{
+    color: white;
+    font-size: xx-large;
+    font-weight: bolder;
+    background-color: black;
+}
+
+header>nav>#log{
+    display: flex;
+    justify-content: space-between;
+    width: 23vw;
+}
+
+header>nav>#log>a{
+    text-decoration: none;
+    color: black;
+    font-weight: light;
+    transition: 1s;
+}
+
+header>nav>#log>a:hover{
+    font-size: 120%;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+main{
+    margin-bottom: 3rem;
+    padding: 0rem 1rem;
+}
+
+body main h1{
+    color: white;
+    margin-bottom: 2rem;
+}
+
+main fieldset{
+    position: relative;
+    left: 15vw;
+    background-color: white;
+    width: 50vw;
+    height: 60%;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+}
+
+main fieldset form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.226);
+    padding: 1rem 1rem;
+}
+
+main fieldset form p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+main fieldset form p label{
+    font-size: large;
+    font-weight: bold;
+    margin-right: 0.3rem;
+}
+
+main fieldset form p #id_email{
+    border-radius: 0.5rem;
+    font-size: large;
+    text-align: center;
+    width: 65%;
+    height: 3rem;
+}
+
+main fieldset form p #id_noms{
+    border-radius: 0.5rem;
+    font-size: large;
+    text-align: center;
+    width: 65%;
+    height: 3rem;
+}
+
+main fieldset form p #id_sexe{
+    border-radius: 0.5rem;
+    font-size: larger;
+    text-align: center;
+    width: 25%;
+    height: 3rem;
+}
+
+main fieldset form p #id_pays{
+    border-radius: 0.5rem;
+    font-size: large;
+    text-align: center;
+    width: 35%;
+    height: 3rem;
+}
+
+main fieldset form p #id_tel{
+    border-radius: 0.5rem;
+    font-size: large;
+    text-align: center;
+    width: 50%;
+    height: 3rem;
+}
+
+main fieldset form p #id_password1{
+    border-radius: 0.5rem;
+    font-size: large;
+    text-align: center;
+    width: 50%;
+    height: 3rem;
+}
+
+main fieldset form p #id_password2{
+    border-radius: 0.5rem;
+    font-size: large;
+    text-align: center;
+    width: 65%;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+main fieldset form ul{
+    position: relative;
+    left: 3vw;
+    list-style: decimal;
+    font-size: large;
+    font-weight: lighter;
+}
+
+main fieldset form p span#id_password2_helptext.helptext{
+    font-size: large;
+    text-indent: 1rem;
+}
+
+main fieldset form div#id_usable_password.radiolist.inline{
+    font-size: large;
+    margin-bottom: 1rem;
+}
+
+main fieldset form button{
+    position: relative;
+    left: 35%;
+    width: 15rem;
+    height: 2rem;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    background-color: rgba(95, 95, 247, 0.747);
+    color: white;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+footer h4{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+footer #social{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer #social img{
+    width: 3rem;
+    height: 3rem;
+}
+
+footer #legal{
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer #legal h4{
+    position: relative;
+    left: 75vw;
+    margin-right: 1rem;
+    background-color: white;
+    border-radius: 3rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    width: 25rem;
+    padding: 0.5rem 0.5rem;
+} */
+
+footer #legal #cop{
+    position: relative;
+    left: 40vw;
+    display: flex;
+    align-items: center;
+    width: 35vw;
+    margin-bottom: 1.5rem;
+}
+
+footer #legal #cop img{
+    width: 2rem;
+    height: 2rem;
+}

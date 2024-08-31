@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Takus Dev & Services</title>
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>  
+   <header>
+       <a href="/"><img src="{% static 'images/logo.png' %}" alt=""></a>
+       <nav>
+           <ul>
+               <li><a href="/">HOME</a></li>
+               <li><a href="#services">SERVICES</a></li>
+               <li><a href="#achieve">ACHIEVEMENTS</a></li>
+           </ul>
+           <div id="log">
+               <a href="/inscription/">INSCRIPTION</a>
+               <a href="/connexion/">CONNEXION</a>
+           </div>
+       </nav>
+   </header>
+   <main>
+       <h1>Welcome !</h1>
+       <div id="sep">
+           <img src="{% static 'images/triangle2.png' %}" alt="">
+           <img src="{% static 'images/triangle1.png' %}" alt="" id="imf">
+       </div>
+       <div id="home">
+        <div id="bio1">
+                <h3>{{ bio.titre }}</h3>
+                <p>{{ bio.detail_court }}</p>
+                <a href="/biodet/">EN SAVOIR PLUS</a>
+        </div>
+           <img src="{% static 'images/myp.jpeg' %}" alt="">
+       </div>
+       <div id="sep">
+           <img src="{% static 'images/triangle2.png' %}" alt="">
+           <img src="{% static 'images/triangle1.png' %}" alt="" id="imf">
+       </div>
+       <div id="services">
+           <div id="stete">
+               <h3>Nos services </h3>
+               <form>
+                   <label for="opt">Trier par:</label>
+                   <select name="" id="opt">
+                       <option value="1" selected="selected">Nom</option>
+                       <option value="2">Prix</option>
+                       <option value="3">Avis</option>
+                       <option value="3">Date</option>
+                   </select>
+               </form>
+           </div>
+           <div id="sitems">
+               <table>
+                    {% for service in services %}
+                        {% if forloop.counter0|divisibleby:4 %}
+                            <tr></tr>
+                        {% endif %}
+                        <td>
+                            <div id="col">
+                                {% if service.image %}
+                                    <img src="{{ service.image.url }}" alt="{{ service.nom }}">
+                                {% else %}
+                                    <img src="/static/default_service_image.png" alt="Image par défaut">
+                                {% endif %}
+                            </div>
+                            <h4>{{ service.nom }}</h4>
+                            <p>
+                                {{ service.detail_short }}
+                            </p>
+                            <a href="#">CONSULTER</a>
+                        </td>
+                    {% endfor %}
+                    {% if forloop.counter0|divisibleby:4 == False %}
+                        </tr>
+                    {% endif %}
+               </table>
+           </div>
+       </div>
+       <div id="sep">
+            <img src="{% static 'images/triangle2.png' %}" alt="">
+            <img src="{% static 'images/triangle1.png' %}" alt="" id="imf">
+        </div>
+       <div id="achieve">
+           <h3>Mes realisation</h3>
+           <div id="aitems">
+               <div id="real1">
+                   <video src="/home/takus/Bureau/PORTFOLIO/video/🔴_Créer_un_blog_complet_avec_django_de_A_à_Z_#01-Introduction(0).mp4" controls="controls"></video>
+                   <div id="deta">
+                       <h4>Realisation 1</h4>
+                       <p>
+                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, harum 
+                           ipsum reprehenderit sed animi enim nobis quidem error temporibus repellendus.
+                       </p>
+                       <ul>
+                           <li>Date:</li>
+                           <li>Lieu:</li>
+                           <li id="star">
+                               <h6>Note:  </h6>
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                           </li>
+                       </ul>
+                       <div id="comd">
+                           <button>READ MORE</button>
+                           <button id="btb">TRY IT</button>
+                       </div>
+                   </div>
+               </div>
+               <div id="real1">
+                   <video src="/home/takus/Bureau/PORTFOLIO/video/🔴_Créer_un_blog_complet_avec_django_de_A_à_Z_#01-Introduction(0).mp4" controls="controls"></video>
+                   <div id="deta">
+                       <h4>Realisation 2</h4>
+                       <p>
+                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, harum 
+                           ipsum reprehenderit sed animi enim nobis quidem error temporibus repellendus.
+                       </p>
+                       <ul>
+                           <li>Date:</li>
+                           <li>Lieu:</li>
+                           <li id="star">
+                               <h6>Note:</h6>
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/halthstar.png" alt="">
+                           </li>
+                       </ul>
+                       <div id="comd">
+                           <button>READ MORE</button>
+                           <button id="btb">TRY IT</button>
+                       </div>
+                   </div>
+               </div>
+               <div id="real1">
+                   <video src="/home/takus/Bureau/PORTFOLIO/video/🔴_Créer_un_blog_complet_avec_django_de_A_à_Z_#01-Introduction(0).mp4" controls="controls"></video>
+                   <div id="deta">
+                       <h4>Realisation 3</h4>
+                       <p>
+                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, harum 
+                           ipsum reprehenderit sed animi enim nobis quidem error temporibus repellendus.
+                       </p>
+                       <ul>
+                           <li>Date:</li>
+                           <li>Lieu:</li>
+                           <li id="star">
+                               <h6>Note:</h6>
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/halthstar.png" alt="">
+                           </li>
+                       </ul>
+                       <div id="comd">
+                           <button>READ MORE</button>
+                           <button id="btb">TRY IT</button>
+                       </div>
+                   </div>
+               </div>
+               <div id="real1">
+                   <video src="/home/takus/Bureau/PORTFOLIO/video/🔴_Créer_un_blog_complet_avec_django_de_A_à_Z_#01-Introduction(0).mp4" controls="controls"></video>
+                   <div id="deta">
+                       <h4>Realisation 4</h4>
+                       <p>
+                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, harum 
+                           ipsum reprehenderit sed animi enim nobis quidem error temporibus repellendus.
+                       </p>
+                       <ul>
+                           <li>Date:</li>
+                           <li>Lieu:</li>
+                           <li id="star">
+                               <h6>Note:</h6>
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
+                               <img src="/home/takus/Bureau/PORTFOLIO/images/halthstar.png" alt="">
+                           </li>
+                       </ul>
+                       <div id="comd">
+                           <button>READ MORE</button>
+                           <button id="btb">TRY IT</button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div id="sep">
+            <img src="{% static 'images/triangle2.png' %}" alt="">
+            <img src="{% static 'images/triangle1.png' %}" alt="" id="imf">
+        </div>
+   </main>
+   <a href="#" id="top"><img src="{% static 'images/arrow.png' %}" alt=""></a>
+   <footer>
+       <h4>You Can Join Me On</h4>
+       <div id="social">
+           <img src="{% static 'images/insta.png' %}" alt="">
+           <img src="{% static 'images/facebook_5968764.png' %}" alt="">
+           <img src="{% static 'images/linkedin_3536505.png' %}" alt="">
+           <img src="{% static 'images/location_90567.png' %}" alt="">
+           <img src="{% static 'images/logo-twitter-blanc.png' %}" alt="">
+           <img src="{% static 'images/telegram_3536661.png' %}" alt="">
+           <img src="{% static 'images/whatsapp_3536445.png' %}" alt="">
+           <img src="{% static 'images/youtube_4494485.png' %}" alt="">
+       </div>
+       <div id="legal">
+<!--             <h4>Build by TAKAM STEVE AROLD</h4> -->
+           <span id="cop">
+               <img src="{% static 'images/copyright_24dp_000000_FILL0_wght400_GRAD0_opsz24.png' %}" alt="">
+               <p>Copyright 2018./ <i>Takam Steve Arold</i></p>
+           </span>
+       </div>
+   </footer>
+</body>
+</html>
