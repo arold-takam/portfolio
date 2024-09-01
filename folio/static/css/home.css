@@ -153,14 +153,15 @@ main>#home{
 }
 
 main>#home>#bio1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 35vw;
     height: 25rem;
-    color: rgba(255, 255, 255, 0.514);
-    text-align: justify;
-    text-indent: 5rem;
-    background: linear-gradient(blue, rgb(124, 124, 245));
+    color: black;
+    background-color: #fff0bd;
     background-position: left;
-    background-size: cover;
     border-radius: 1rem;
     padding: 1rem 1rem;
     transition: 1s;
@@ -168,17 +169,21 @@ main>#home>#bio1{
 
 main>#home>#bio1:hover{
     font-weight: bolder;
-    color: rgb(255, 255, 255);
     font-size: larger;
 }
 
 #bio1>h3{
-    position: relative;
-    left: 25%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
     margin-bottom: 1rem;
 }
 
 #bio1 p{
+    text-indent: 5rem;
+    text-align: justify;
     margin-bottom: 2rem;
 }
 
@@ -272,8 +277,9 @@ main>#home>img{
     position: relative;
     left: 5%;
     width: 90%;
-    height: 15rem;
-    box-shadow: 0.1rem 0.2rem 0.5rem rgb(138, 138, 255);
+    height: 20rem;
+    object-fit: cover;
+    box-shadow: 0.1rem 0.2rem 0.5rem rgb(0, 0, 0);
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -317,83 +323,98 @@ main>#home>img{
     font-weight: bolder;
 }
 
-#achieve{
+
+#achieves{
     height: 100vh;
     padding: 0rem 2rem;
     margin-bottom: 10rem;
     transition: 1s;
 }
 
-#achieve>h3{
+#achieves h3{
     color: white;
     font-size: xx-large;
     margin-bottom: 2rem;
 }
 
-#achieve #aitems{
+#achieves #items{
     height: 60rem;
+    list-style: none;
     margin: 0rem 2rem;
     padding: 2rem 2rem;
     background-color: rgba(255, 255, 255, 0.466);
     overflow: hidden scroll;
 }
 
-#achieve #aitems #real1{
+#achieves #items li{
     display: flex;
-    height: 40%;
+    height: auto;
     background-color: white;
     margin-bottom: 2rem;
 }
 
-#achieve #aitems #real1 video{
+#achieves #items li #medya{
     width: 40%;
-    height: auto;
+    height: 100%;
 }
 
-#achieve #aitems #real1  #deta{
+.media-content {
+    width: 100%; /* Ajuste à la largeur du conteneur */
+    height: 100%;
+}
+
+/* Styles spécifiques pour les vidéos */
+.video {
+    object-fit: cover;
+    height: 320px;
+    width: 100%;
+}
+
+/* Styles spécifiques pour les images */
+.image {
+    object-fit: cover;/* Ajuste l'image à l'intérieur du conteneur */
+    height: 320px;
+    width: 100%;
+}
+
+#achieves #items li #des{
     width: 60%;
-    height: auto;
+    height: 100%;
     padding: 0.5rem 0.7rem;
 }
 
-#achieve #aitems #real1  #deta h4{
+#achieves #items li #des h4{
     text-align: center;
     font-size: xx-large;
     margin-bottom: 1rem;
 }
 
-#achieve #aitems #real1  #deta p{
+#achieves #items li #des p{
     text-align: justify;
     text-indent: 3rem;
     font-size: large;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-#achieve #aitems #real1  #deta ul{
-    list-style: none;
-    margin-bottom: 3rem;
+#achieves #items li #des table{
+    margin-bottom: 0.5rem;
+    width: 30%;
 }
 
-#achieve #aitems #real1  #deta ul li{
-    margin-bottom: 1rem;
-}
-
-#achieve #aitems #real1  #deta ul #star{
+#achieves #items li #des table tr{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 1.5rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
 }
 
-#achieve #aitems #real1  #deta ul #star h6{
+#achieves #items li #des table tr td{
     font-size: large;
-    margin-right: 1rem;
-}
-
-#achieve #aitems #real1  #deta ul #star img{
     height: 100%;
 }
 
-#achieve #aitems #real1  #deta #comd{
+#achieves #items li #des #purchase{
     display: flex;
     justify-content: space-around;
     position: relative;
@@ -401,7 +422,7 @@ main>#home>img{
     width: 80%;
 }
 
-#achieve #aitems #real1  #deta #comd button{
+#achieves #items li #des #purchase #read{
     height: 3rem;
     width: 7rem;
     font-weight: lighter;
@@ -413,14 +434,14 @@ main>#home>img{
     transition: 0.5s;
 }
 
-#achieve #aitems #real1  #deta #comd button:hover{
+#achieves #items li #des #purchase #read:hover{
     color: black;
     font-size: 1rem;
     font-weight: bold;
     scale: 1.1;
 }
 
-#achieve #aitems #real1  #deta #comd #btb{
+#achieves #items li #des #purchase #try{
     height: 3rem;
     padding: 0rem 0.4rem;
     font-weight: lighter;
@@ -432,12 +453,13 @@ main>#home>img{
     transition: 0.5s;
 }
 
-#achieve #aitems #real1  #deta #comd #btb:hover{
+#achieves #items li #des #purchase #try:hover{
     color: black;
     font-size: 1rem;
     font-weight: bold;
     scale: 1.1;
 }
+
 
 #top{
     position: relative;

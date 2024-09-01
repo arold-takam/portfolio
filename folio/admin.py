@@ -54,8 +54,9 @@ class AvisAdmin(admin.ModelAdmin):
 
 # Modèle pour Realisation (affichage image ou vidéo géré par admin)
 class RealisationAdmin(admin.ModelAdmin):
-    list_display = ('id', 'titre', 'nom_client', 'lieu_real', 'date_real', 'display_content')
+    list_display = ('id', 'position',  'titre', 'nom_client', 'lieu_real', 'date_real', 'display_content')
     search_fields = ('titre', 'nom_client')
+    list_editable = ('position',)
     list_filter = ('date_real',)
 
     # Action pour approuver ou désapprouver les réalisations

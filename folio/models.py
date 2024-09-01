@@ -143,6 +143,7 @@ class Avis(models.Model):
 
 # Modèle pour les réalisations
 class Realisation(models.Model):
+    position = models.PositiveIntegerField(default=0)
     titre = models.CharField(max_length=255)
     detail_short = models.CharField(max_length=255)
     detail_long = models.TextField()

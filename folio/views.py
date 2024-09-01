@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from .forms import UserRegistrationForm 
-from .models import Bio, User, Service
+from .models import Bio, User, Service, Realisation
 
 def home(request):
     try:
@@ -9,10 +9,10 @@ def home(request):
     except Bio.DoesNotExist:
         bio = None
 
-    services = Service.objects.all()
     services = Service.objects.order_by('position')
+    realisations = Realisation.objects.order_by('position')  # Fetch all realizations
 
-    return render(request, 'home.html', {'bio': bio, 'services':services})
+    return render(request, 'home.html', {'bio': bio, 'services':services, 'realisations': realisations})
 
 def biodet(request):
     try:

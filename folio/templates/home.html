@@ -84,116 +84,48 @@
             <img src="{% static 'images/triangle2.png' %}" alt="">
             <img src="{% static 'images/triangle1.png' %}" alt="" id="imf">
         </div>
-       <div id="achieve">
-           <h3>Mes realisation</h3>
-           <div id="aitems">
-               <div id="real1">
-                   <video src="/home/takus/Bureau/PORTFOLIO/video/🔴_Créer_un_blog_complet_avec_django_de_A_à_Z_#01-Introduction(0).mp4" controls="controls"></video>
-                   <div id="deta">
-                       <h4>Realisation 1</h4>
-                       <p>
-                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, harum 
-                           ipsum reprehenderit sed animi enim nobis quidem error temporibus repellendus.
-                       </p>
-                       <ul>
-                           <li>Date:</li>
-                           <li>Lieu:</li>
-                           <li id="star">
-                               <h6>Note:  </h6>
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                           </li>
-                       </ul>
-                       <div id="comd">
-                           <button>READ MORE</button>
-                           <button id="btb">TRY IT</button>
-                       </div>
-                   </div>
-               </div>
-               <div id="real1">
-                   <video src="/home/takus/Bureau/PORTFOLIO/video/🔴_Créer_un_blog_complet_avec_django_de_A_à_Z_#01-Introduction(0).mp4" controls="controls"></video>
-                   <div id="deta">
-                       <h4>Realisation 2</h4>
-                       <p>
-                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, harum 
-                           ipsum reprehenderit sed animi enim nobis quidem error temporibus repellendus.
-                       </p>
-                       <ul>
-                           <li>Date:</li>
-                           <li>Lieu:</li>
-                           <li id="star">
-                               <h6>Note:</h6>
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/halthstar.png" alt="">
-                           </li>
-                       </ul>
-                       <div id="comd">
-                           <button>READ MORE</button>
-                           <button id="btb">TRY IT</button>
-                       </div>
-                   </div>
-               </div>
-               <div id="real1">
-                   <video src="/home/takus/Bureau/PORTFOLIO/video/🔴_Créer_un_blog_complet_avec_django_de_A_à_Z_#01-Introduction(0).mp4" controls="controls"></video>
-                   <div id="deta">
-                       <h4>Realisation 3</h4>
-                       <p>
-                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, harum 
-                           ipsum reprehenderit sed animi enim nobis quidem error temporibus repellendus.
-                       </p>
-                       <ul>
-                           <li>Date:</li>
-                           <li>Lieu:</li>
-                           <li id="star">
-                               <h6>Note:</h6>
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/halthstar.png" alt="">
-                           </li>
-                       </ul>
-                       <div id="comd">
-                           <button>READ MORE</button>
-                           <button id="btb">TRY IT</button>
-                       </div>
-                   </div>
-               </div>
-               <div id="real1">
-                   <video src="/home/takus/Bureau/PORTFOLIO/video/🔴_Créer_un_blog_complet_avec_django_de_A_à_Z_#01-Introduction(0).mp4" controls="controls"></video>
-                   <div id="deta">
-                       <h4>Realisation 4</h4>
-                       <p>
-                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, harum 
-                           ipsum reprehenderit sed animi enim nobis quidem error temporibus repellendus.
-                       </p>
-                       <ul>
-                           <li>Date:</li>
-                           <li>Lieu:</li>
-                           <li id="star">
-                               <h6>Note:</h6>
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/Étoile.png" alt="">
-                               <img src="/home/takus/Bureau/PORTFOLIO/images/halthstar.png" alt="">
-                           </li>
-                       </ul>
-                       <div id="comd">
-                           <button>READ MORE</button>
-                           <button id="btb">TRY IT</button>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-       <div id="sep">
+        <div id="achieves">
+            <h3>Mes realisations</h3>
+            <ul id="items">
+                {% for realisation in realisations %}
+                    <li>
+                        <div id="medya">
+                            {% if realisation.video_short %}
+                                <video class="media_content video" src="{{ realisation.video_short.url }}" controls="controls"></video>
+                            {% elif realisation.image %}
+                                <img class="media_content image" src="{{ realisation.image.url }}" alt="{{ realisation.titre }}">
+                            {% endif %}
+                        </div>                
+                        <div id="des">
+                            <h4>{{ realisation.titre }}</h4>
+                            <p>{{ realisation.detail_short }}</p>
+                            <table>
+                                <tr>
+                                    <td style="font-size: xx-large;">Date: </td>
+                                    <td>{{ realisation.date_real }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: xx-large;">Lieu: </td>
+                                    <td>{{ realisation.lieu_real }}</td>
+                                </tr>
+                                <tr style="width: 190%;">
+                                    <td style="font-size: xx-large;">Noms du clien: </td>
+                                    <td style="font-weight: bold; color: rgb(45, 45, 207); font-size: x-large;">{{ realisation.nom_client }}</td>
+                                </tr>
+                            </table>
+                            <div id="purchase">
+                                <button id="read">READ MORE</button>
+                                <button id="try">TRY IT</button>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+<!--        <div id="sep">
             <img src="{% static 'images/triangle2.png' %}" alt="">
             <img src="{% static 'images/triangle1.png' %}" alt="" id="imf">
-        </div>
+        </div> -->
    </main>
    <a href="#" id="top"><img src="{% static 'images/arrow.png' %}" alt=""></a>
    <footer>
