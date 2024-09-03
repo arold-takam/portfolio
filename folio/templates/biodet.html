@@ -22,10 +22,103 @@
     </header>
     <main>
         <div id="contain">
+            <div id="tete">
+                <div id="name">
+                    <h1>Takam Steve Arold</h1>
+                    <h4>Cameroun>Yaounde</h4>
+                    <span>
+                        <h6>+237676169056 ou +237620702979</h6>
+                        <p>www.aroldtakam3@gmail.com</p>
+                    </span>
+                </div>
+                <img src="{% static 'images/myp.jpeg' %}" alt="">
+            </div>
             <h2>{{ bio.titre }}</h2>
-            <p>
-                 {{ bio.detail}}
-            </p>
+            <div id="sep">Mes objectifs</div>
+                <p>
+                    {{ bio.detail}}
+                </p>
+            <div id="sep">Mes competences</div>
+            <ul id="list1">
+                <li>La gestion de projets</li>
+                <li>Le marketing digital</li>
+                <li>L'entrepreneuriat</li>
+                <li>La programmation web frontend( <strong>HTML, CSS, React JS, VUE JS, Angular JS</strong> )</li>
+                <li>La programmation web backend( <strong>python, javascript, java</strong> )</li>
+                <li>La securite informatique( <strong>python, java</strong> )</li>
+            </ul>
+            <div id="sep">Education</div>
+            <table>
+                <tr>
+                    <td id="nom">Cycle maternelle: </td>
+                    <td>ecole primaire et maternelle la Maer(de 2005 a 2007)</td>
+                </tr>
+                <tr>
+                    <td id="nom">Cycle primaire1: </td>
+                    <td>ecole public Don japonais(de 2007 a 2009)</td>
+                </tr>
+                <tr>
+                    <td id="nom">Cycle primaire2: </td>
+                    <td>ecole primaire la Maer(de 2009 a 2013)</td>
+                </tr>
+                <tr>
+                    <td id="nom">Formation proffesionnelles: </td>
+                    <td>Academie Africaine de Web Design(Juin 2018 a Aout 2018)</td>
+                </tr>
+                <tr>
+                    <td id="nom">Cycle secondaire: </td>
+                    <td>Institut Blaise Pascal(de 2014 a 2022)</td>
+                </tr>
+            </table>
+            <div id="sep">Experiances proffesionnelles</div>
+            <ul id="list">
+                <li>
+                    <ul>
+                        <li><strong>Marche Etoudi(Yaounde/ 2007-2014)</strong></li>
+                        <li><h4>Commercant</h4></li>
+                        <li>
+                            <p>
+                                J'ai realiser de multiples activites 
+                                commerciales, nottement: les ventes de denrees
+                                alimentaires, l'apachage, etc
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><strong>Boutiques pour particuliers(Yaounde/ 2018-2022)</strong></li>
+                        <li><h4>Gestion de boutiques</h4></li>
+                        <li>
+                            <p>
+                                J'ai gerer plusieurs boutiques d'approvisionement en 
+                                produits de premieres necessite pour des particuliers 
+                                a l'instar de Mr Nkuetcheu Nzokou Richard Carlos(+237672123482)
+                                et Mme Mimie(+237654494014).
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><strong>Ingenieurs multiples(Yaounde/ 2022)</strong></li>
+                        <li><h4>Prestaion de services dans les domaines des Travaux et Batiments</h4></li>
+                        <li>
+                            <p>
+                                J'ai offert mes services des ingenieurs 
+                                du BTP a l'instart de: Mr Chin Alain(+237652892032);
+                                Mr Sam(+237671074778); Mr Claver(+237656580750); 
+                                Mr Basil(+237671997392)
+
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="conlusion">
+                <p>Je suis deja tout exite de creer l'avenir avec vous.</p>
+                <h4>A bientot !</h4>
+            </div>
             <span>
                 <strong>Actualisee le: </strong>
                 <h4>{{ bio.date_modification}}</h4>

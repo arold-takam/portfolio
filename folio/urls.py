@@ -18,11 +18,14 @@ from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import CustomLoginView
 
 urlpatterns = [
     path('', views.home, name="home"),
+    path('home2/', views.home2, name="home2"),  # Accueil pour les utilisateurs connectés
     path('biodet/', views.biodet, name="biodet"),
     path('inscription/', views.inscription, name="inscription"),
+    path('connexion/', CustomLoginView.as_view(), name='connexion'),
 ]
 
 

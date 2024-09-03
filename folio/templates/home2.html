@@ -3,27 +3,23 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Takus Dev & Services</title>
+   <title>Takus Dev & Services/ACCEUIL</title>
    {% load static %}
    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>  
    <header>
-       <a href="/"><img src="{% static 'images/logo.png' %}" alt=""></a>
+       <a href="/home2/"><img src="{% static 'images/logo.png' %}" alt=""></a>
        <nav>
            <ul>
-               <li><a href="/">HOME</a></li>
+               <li><a href="/home2/">HOME</a></li>
                <li><a href="#services">SERVICES</a></li>
                <li><a href="#achieves">ACHIEVEMENTS</a></li>
            </ul>
-           <div id="log">
-                {% if user.is_authenticated %}
-                    <a href="{% url 'logout' %}">LOGOUT</a>
-                {% else %}
-                    <a href="/inscription/">INSCRIPTION</a>
-                    <a href="{% url 'connexion' %}">CONNEXION</a>
-                {% endif %}
-           </div>
+<!--            <div id="log">
+               <a href="/inscription/">INSCRIPTION</a>
+               <a href="{% url 'connexion' %}">CONNEXION</a>
+           </div> -->
        </nav>
    </header>
    <main>
